@@ -1,5 +1,7 @@
 package streams;
 
+import com.sum.techie.Main;
+
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -16,6 +18,7 @@ public class HighestSpendDay {
                 new Transaction("T31", LocalDate.of(2024,1,1),390),
                 new Transaction("T3", LocalDate.of(2024,1,1),300)
         );
+        //Find the day with highest salary
        Map<LocalDate,Double> collect  = transactions.stream().collect(Collectors.groupingBy(
                Transaction::getDate,
                Collectors.summingDouble(Transaction::getAmount)
@@ -27,5 +30,9 @@ public class HighestSpendDay {
 
 Map.Entry<LocalDate,Double> localDateDoubleEntry = collect.entrySet().stream().max(Map.Entry.comparingByValue()).orElseThrow();
         System.out.println(localDateDoubleEntry);
+        localDateDoubleEntry =  collect.entrySet().stream().min(Map.Entry.comparingByValue()).orElseThrow();
+        System.out.println(localDateDoubleEntry);
+
+
     }
 }
