@@ -20,6 +20,7 @@ public class SlidingWindowAvrg {
                 ).toList();
 
         System.out.println(result);
+        input.forEach(n->System.out.println(n));
 
 
     }
