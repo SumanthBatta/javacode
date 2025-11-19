@@ -1,0 +1,7 @@
+2025-11-14T23:24:00.591127 [INFO] Application started
+2025-11-14T23:24:00.598654 [ERROR] NullPointerException occurred
+2025-11-14T23:24:17.042484 [INFO] Application started
+2025-11-14T23:24:17.049859 [ERROR] NullPointerException occurred
+2025-11-14T23:37:34.952022 [INFO] Application started
+2025-11-14T23:37:34.959380 [DEBUG] Debug point reached
+2025-11-14T23:37:34.959434 [ERROR] Something went wrong!
