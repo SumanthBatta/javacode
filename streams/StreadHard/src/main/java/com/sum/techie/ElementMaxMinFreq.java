@@ -7,7 +7,7 @@ public class ElementMaxMinFreq {
     public static void main(String[] args) {
         int[] arr = new int[]{1,1,2,4,4,5,5,4,6,7};
             maxMin(arr,arr.length);
-            maxMin1(arr, arr.length);
+        maxMinTest(arr, arr.length);
     }
     public static void maxMin(int[] arr, int n){
         Boolean[] visible  = new Boolean[n];
@@ -57,6 +57,34 @@ public class ElementMaxMinFreq {
         }
         System.out.println("MaxEle: "+max+"MinEle: "+min);
     }
+    public static void maxMinTest(int[] arr, int n){
+        Boolean[] visible = new Boolean[n];
+        int maxFre = 0, minFre=n;
+        int maxEle=0, minEle=0;
+        for(int i = 0; i<n;i++){
+            if(visible[i]!=null)
+                continue;
+
+            int c = 1;
+            for(int j = i+1; j<n;j++){
+                if(arr[i]==arr[j]){
+                    c++;
+                    visible[j]=true;
+                }
+            }
+            if(c>maxFre){
+                maxEle=arr[i];
+                maxFre=c;
+            }
+            if(c<minFre){
+                minFre=c;
+                minEle=arr[i];
+            }
+        }
+
+        System.out.println("the max is : "+maxEle+"The min is : "+minEle);
+    }
+
 
 }
 
