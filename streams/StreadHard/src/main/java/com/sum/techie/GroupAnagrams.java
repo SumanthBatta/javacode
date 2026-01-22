@@ -19,10 +19,11 @@ public class GroupAnagrams {
 
         List<List<String>> res = new ArrayList<>(cont.values());
 
-        for(List<String> each : res){
+        for (List<String> each : res) {
             System.out.println(each);
         }
-    }}
+    }
+}
 
 
 

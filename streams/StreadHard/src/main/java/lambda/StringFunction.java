@@ -4,7 +4,7 @@ interface StringFunction {
     String run(String str);
 }
 
-//lambda as method reference
+//lambda as method refer473276ence
  class Main {
     public static void main(String[] args) {
    StringFunction exclaim  = (x->x+'!');
