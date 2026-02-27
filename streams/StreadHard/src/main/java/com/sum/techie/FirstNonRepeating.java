@@ -1,25 +1,49 @@
 package com.sum.techie;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 public class FirstNonRepeating {
     public static void main(String[] args) {
+
         System.out.println(removeDuplicates("scabbard"));
+        System.out.println(firstNonRepeating("ssccabbard"));
+        System.out.println(firstNonRepeatingHash("ssccabbard"));
     }
+    public static String firstNonRepeatingHash(String s){
+        Map<Character,Integer> chars = new LinkedHashMap<>();
+        for(char c : s.toCharArray()){
+           chars.put(c,chars.getOrDefault(c,0)+1);
+
+        }
+        for(Map.Entry<Character,Integer> entry : chars.entrySet() ){
+            if(entry.getValue()==1){
+               return entry.getKey().toString();
+            }
+        }
+        return "Not found";
+    }
+
     public static Character firstNonRepeating(String s) {
-        int [] freq = new int[256];
+        int[] freq = new int[256];
         for(char c : s.toCharArray()){
             freq[c]++;
         }
-
         for(char c : s.toCharArray()){
-            if(freq[c]==1)
-            return c;
+            if(freq[c]==1){
+                return c;
+            }
         }
-        return null;
-
+        return 'c';
+//        int [] freq = new int[256];
+//        for(char c : s.toCharArray()){
+//            freq[c]++;
+//        }
+//
+//        for(char c : s.toCharArray()){
+//            if(freq[c]==1)
+//            return c;
+//        }
+//        return 'c';
     }
 
     public static String removeDuplicates(String s) {

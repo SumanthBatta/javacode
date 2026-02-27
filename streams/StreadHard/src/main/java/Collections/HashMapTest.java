@@ -28,10 +28,29 @@ public class HashMapTest {
         System.out.println(t1);
         numbers.forEach(method);
 
+        String word1 = "ab", word2 = "pqrs";
+        StringBuilder str  = new StringBuilder();
+        for (int i = 0 ; i<word1.length()+word2.length();i++){
 
+            if(i<word1.length()&&i<word2.length()){
+                str.append(word1.charAt(i)).append(word2.charAt(i));
+                continue;
+            }
+            if(i<word1.length()){
+                str.append(word1.charAt(i));
+                continue;
+            }
+            if(i<word2.length()){
+                str.append(word2.charAt(i));
+            }
+
+        }
+        System.out.println( str.toString());
 
 
     }
+
+
 
 
 }
