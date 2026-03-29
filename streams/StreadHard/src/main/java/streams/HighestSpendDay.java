@@ -18,6 +18,9 @@ public class HighestSpendDay {
                 new Transaction("T31", LocalDate.of(2024,1,1),390),
                 new Transaction("T3", LocalDate.of(2024,1,1),300)
         );
+
+
+      System.out.println(transactions.stream().collect(Collectors.groupingBy(e->e.getDate(),Collectors.summingDouble(e->e.getAmount()))).entrySet().stream().max(Map.Entry.comparingByValue()));
         //Find the day with highest salary
        Map<LocalDate,Double> collect  = transactions.stream().collect(Collectors.groupingBy(
                Transaction::getDate,

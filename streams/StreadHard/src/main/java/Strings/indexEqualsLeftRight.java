@@ -6,9 +6,10 @@ import java.util.Stack;
 
 public class indexEqualsLeftRight {
     public static void main(String[] args) {
+//        List<Integer> arr = Arrays.asList(4, 5, 2, 25);
         List<Integer> arr = Arrays.asList(-7, 1, 5, 2, -4, 3, 0);
-
         nextGreaterElement(arr);
+        System.out.println("jlo");
        System.out.println(findIndexEqualsLeftRight(arr,sum(arr)));
     }
 
@@ -21,6 +22,7 @@ public class indexEqualsLeftRight {
     }
 
     public static int findIndexEqualsLeftRight(List<Integer> arr, int total){
+        System.out.println(total+"fskjf");
         int len = arr.size();
         int left = 0;
         for(int i  = 0 ; i<len; i++){
@@ -32,10 +34,9 @@ public class indexEqualsLeftRight {
         }
         return -1;
     }
-
+//    List<Integer> arr = Arrays.asList(-7, 1, 5, 2, -4, 3, 0);
     public static void nextGreaterElement(List<Integer> arr){
         Stack<Integer>  cont = new Stack<>();
-
         for(int i =  arr.size()-1 ; i>=0; i--){
             while(!cont.isEmpty() && cont.peek()<=arr.get(i)){
                 cont.pop();

@@ -22,6 +22,5 @@ public class BiGramFrequency {
         for(String a: words) {
             System.out.println(a);
         }
-
     }
 }

@@ -34,12 +34,18 @@ public class EmployeeWith3Department {
                 new WorkRecord("Im","cse"),
                 new WorkRecord("Im","ece"));
         Map<String,List<WorkRecord>> record = records.stream().collect(Collectors.groupingBy(WorkRecord::getName));
-        System.out.println(record);
+        System.out.println("the data of each person here is : "+record);
         List<String> list = record.entrySet().stream().filter(e-> e.getValue().size()>=3).map(Map.Entry::getKey).toList();
+
         System.out.println(list);
         List<String> employees = records.stream().collect(Collectors.groupingBy(WorkRecord::getName, Collectors.counting()))
                 .entrySet().stream().filter(e->e.getValue()>=3).map(Map.Entry::getKey).toList();
         System.out.println(employees);
+
+
+
+
+
 
     }
 }

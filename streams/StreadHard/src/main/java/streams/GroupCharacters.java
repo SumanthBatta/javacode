@@ -14,7 +14,7 @@ public class GroupCharacters {
     }
     public static void main(String[] args) {
         List<Character> chars = Arrays.asList('A','a','b','8','#','B','9');
-        Map<Object, List<Character>> collect = chars.stream().collect(Collectors.groupingBy(ch -> getCharacterType(ch.charValue())));
+        Map<Object, List<Character>> collect = chars.stream().collect(Collectors.groupingBy(ch -> getCharacterType(ch)));
 System.out.println(collect);
     }
 

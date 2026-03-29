@@ -6,6 +6,7 @@ public class MissingNumber {
     public static void main(String[] args) {
         int [] a= {1,2,4,5};
         int n = 5;
+        findMissingNumber(a,n);
     }
     public static void findMissingNumber(int[] a, int n){
 //        for(int i = 1; i<n;i++){
@@ -29,7 +30,7 @@ public class MissingNumber {
         for(int i =1; i<k+1;i++){
             if(!has.containsKey(i)) System.out.print(i);;
         }
-        System.out.print(0);
+//        System.out.print(0);
 
         //optimal
 

@@ -42,6 +42,10 @@ public class SalaryRangeGrouping {
                 new Employee("Fank",105000)
         );
 
+        System.out.println(employees);
+
+        System.out.println(employees.stream().collect(Collectors.groupingBy(e->getSalaryRange(e.getSalary()))));
+
         /* Medium -> bob 78000.0 , david 99000 below 1lakh after 50k
         low - alice, eva upto 50k
         high - charlie, frank after 1lakh
